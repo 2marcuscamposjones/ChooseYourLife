@@ -167,9 +167,9 @@ else:
   print("You have died, you never escaped the forest!")
 # dream
 if health > 0:
-    print("\nYou wake up in bed, heart pounding.")
-    print("A haunting nightmare lingers in your mind.")
-    print("Echoes of the forest whisper to you.")
-    print("Invisible watchers, unseen but felt, beckon.")
-    print("Behind, only darkness; then, a chilling voice: 'Gotcha.'")
-    print("\nGame over. Subject 72, awake. Location: Bravo Site-34. Time: 13:50.")
+    print("\nYou awaken abruptly, heart pounding.")
+    print("The remnants of a chilling nightmare linger in your mind.")
+    print("The eerie whispers of the forest envelop you.")
+    print("Invisible watchers, their presence palpable, beckon from the shadows.")
+    print("Behind you, only an abyss of darkness; then, a bone-chilling voice: 'Gotcha.'")
+    print("\nGame over. Subject 72, status: awake. Location: Bravo Site-34. Time: 13:50.")
