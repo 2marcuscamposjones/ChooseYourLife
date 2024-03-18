@@ -50,65 +50,61 @@ else:
 # Cave
 # Programmer: Marcus Campos-Jones
 if health > 0:
-    print("\nYou have reached a cave, you must decide if you go in or not.")
-    print("Big decicion, make sure you make the right choise!")
-    cave = input("Type a Y for yes or N for no ").upper()
+    print("\nYou've reached a cave. Now, the choice is yours: enter or not.")
+    print("A crucial decision lies ahead. Choose wisely!")
+    cave = input("Type Y for yes or N for no: ").upper()
     if cave == "Y":
-      health = health - dcrsHlthMnr
-      print("You chose the wrong path, you fell into a hole.")
-      print("You have lost health! decreeasing heath by",dcrsHlthMnr,"resulting in your")
-      print("deacresing to", str(health) + ".")
+        health -= dcrsHlthMnr
+        print("You've chosen the wrong path; you've fallen into a hole.")
+        print("You've lost health! Decreasing health by", dcrsHlthMnr, "resulting in")
+        print("your health decreasing to", health, ".")
     else:
-      health = health + incrsHkthMJr
-      print("You chose the right path, you found a medkit incresing your")
-      print("health by",incrsHkthMJr,"resulting in your heath levels icreasing ")
-      print("to",health)
+        health += incrsHkthMJr
+        print("You've chosen the right path; you've found a medkit, increasing your")
+        print("health by", incrsHkthMJr, "resulting in your health level increasing to", health)
+
 else:
   print("You have died, you never escaped the forest!")
 # river
-# Programmer: Marcus Campos-Jones
 if health > 0:
-  print("\nYou have reached a river, you must decide if you go in or not.")
-  print("Big decicion, make sure you make the right choise!")
-  river = input("Type a Y for yes or N for no ").upper()
-  if river == "Y":
-    health = health + incrsHkthMJr
-    print("You chose the rigjt path,the water heals your.")
-    print("health by",incrsHkthMJr,"resulting in your heath levels icreasing ")
-    print("to",health)
-  else:
-    health = health - dcrsHlthMnr
-    print("You chose not get in the water, trip and hurt yourself.")
-    print("You have lost health! decreeasing heath by",dcrsHlthMnr,"resulting in your")
-    print("deacresing to", str(health) + ".")
+    print("\nYou have reached a river. Now, you must decide whether to enter or not.")
+    print("A significant decision lies ahead. Make sure you make the right choice!")
+    river = input("Type Y for yes or N for no: ").upper()
+    if river == "Y":
+        health += incrsHkthMJr
+        print("You chose the right path; the water heals you.")
+        print("Health increased by", incrsHkthMJr, "resulting in your health level increasing to", health)
+    else:
+        health -= dcrsHlthMnr
+        print("You chose not to get in the water and trip, hurting yourself.")
+        print("You have lost health! Decreasing health by", dcrsHlthMnr, "resulting in your")
+        print("health decreasing to", health, ".")
 else:
-  print("You have died, you never escaped the forest!")
+    print("You have died. You never escaped the forest!")
 # house
 # Programmer: Marcus Campos-Jones
 if health > 0:
-  print("\nYou have reached a house, you must decide if you go in or not.")
-  print("Big decicion, make sure you make the right choise!")
-  house = input("Type a Y for yes or N for no ").upper()
-  if house == "Y":
-    health = health - dcrsHlthMnr
-    print("You chose the wrong path, you are attacked.")
-    print("You have lost health! decreeasing heath by",dcrsHlthMnr,"resulting in your")
-    print("deacresing to", str(health) + ".")
-  else:
-    health = health + incrsHkthMJr
-    print("You chose the right path, the old lady gives you cookies increasing your")
-    print("health by",incrsHkthMJr,"resulting in your heath levels icreasing ")
-    print("to",health)
+    print("\nYou have reached a house. Now, you must decide whether to enter or not.")
+    print("A significant decision lies ahead. Make sure you make the right choice!")
+    house = input("Type Y for yes or N for no: ").upper()
+    if house == "Y":
+        health -= dcrsHlthMnr
+        print("You chose the wrong path and are attacked.")
+        print("You have lost health! Decreasing health by", dcrsHlthMnr, "resulting in your")
+        print("health decreasing to", health, ".")
+    else:
+        health += incrsHkthMJr
+        print("You chose the right path; the old lady gives you cookies, increasing your")
+        print("health by", incrsHkthMJr, "resulting in your health level increasing to", health)
 else:
-  print("You have died, you never escaped the forest!")
+    print("You have died. You never escaped the forest!")
 # campfire
-# Programmer: Marcus Campos-Jones
 if health > 0:
   print("\nYou have reached a campfire, you must decide if you sit next to it or not.")
   print("Big decicion, make sure you make the right choise!")
   campfire = input("Type a Y for yes or N for no ").upper()
   if campfire == "Y":
-    health = health +  incrsHkthMnr
+    health = health + incrsHkthMnr
     print("You chose the right option, you are warm.")
     print("You have gained health by",incrsHkthMnr,"resulting in your heath levels ")
     print("increasing to",health)
@@ -116,12 +112,11 @@ if health > 0:
   else:
     health = health - dcrsHlthMjr
     print("You chose the wrong option you freeze.")
-    print("You have lost health! decreeasing heath by",dcrsHlthMjr,"resulting in your")
-    print("deacresing to", str(health) + ".")
+    print("You have lost health! decreasing heath by",dcrsHlthMjr,"resulting in your")
+    print("decreasing to", str(health) + ".")
 else:
   print("You have died, you never escaped the forest!")
 # awake
-# Programmer: Marcus Campos-Jones
 if health > 0:
   print(" \nyou awake next to the campfire,do you put more wood on the fire?")
   print("Big decicion, make sure you make the right choise!")
@@ -139,7 +134,6 @@ if health > 0:
 else:
   print("You have died, you never escaped the forest!")
 # forest
-# Programmer: Marcus Campos-Jones
 if health > 0:
   print("\nYou have walked away from the campfire. do you go left or right?")
   print("Big decicion, make sure you make the right choise!")
@@ -157,7 +151,6 @@ if health > 0:
 else:
   print("You have died, you never escaped the forest!")
 # sword
-# programmer: Marcus Campos-Jones
 if health > 0:
   print("\nIn front of you see a sword in a stone wall, do you pick it up?")
   ("Big decicion, make sure you make the right choise!")
@@ -173,11 +166,10 @@ if health > 0:
 else:
   print("You have died, you never escaped the forest!")
 # dream
-# Programmer: Marcus Campos-Jones
 if health > 0:
-  print("\nYou awake up in your bed.")
-  print("What a terrible nightmare you think.")
-  print("As you get out of bed you can hear the forrest calling you.")
-  print("We are the invisable watchers we can see you, you should check behind you.")
-  print("There is nothing but darkness behind you than you hear a voice say gotcha.\n")
-  print("\nGame over,test subject 72,status awake,location Bravo site-34,time 13:50.")
+    print("\nYou wake up in bed, heart pounding.")
+    print("A haunting nightmare lingers in your mind.")
+    print("Echoes of the forest whisper to you.")
+    print("Invisible watchers, unseen but felt, beckon.")
+    print("Behind, only darkness; then, a chilling voice: 'Gotcha.'")
+    print("\nGame over. Subject 72, awake. Location: Bravo Site-34. Time: 13:50.")
