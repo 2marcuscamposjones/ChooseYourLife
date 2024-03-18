@@ -14,7 +14,6 @@ incrsHkthMJr = 5  # Major health increase
 incrsHkthMnr = 2  # Minor health increase
 
 # Apple Tree
-# Programmer: Marcus Campos-Jones
 if health > 0:
     print("\nYou have just walked into the woods and you have a health level of", health)
     print("You see an apple tree! You are starving. Do you eat the apple?")
@@ -30,7 +29,6 @@ else:
     print("You have died. You never escaped the forest!")
 
 # Fork
-# Programmer: Marcus Campos-Jones
 if health > 0:
     print("\nYou come to a fork in the trail. You must decide if you go left or right.")
     print("A crucial decision lies ahead. Make sure you make the right choice!")
@@ -48,7 +46,6 @@ else:
     print("You have died. You never escaped the forest!")
 
 # Cave
-# Programmer: Marcus Campos-Jones
 if health > 0:
     print("\nYou've reached a cave. Now, the choice is yours: enter or not.")
     print("A crucial decision lies ahead. Choose wisely!")
@@ -83,7 +80,6 @@ else:
     print("You have died. You never escaped the forest!")
 
 # House
-# Programmer: Marcus Campos-Jones
 if health > 0:
     print("\nYou have reached a house. Now, you must decide whether to enter or not.")
     print("A significant decision lies ahead. Make sure you make the right choice!")
