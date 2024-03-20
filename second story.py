@@ -130,15 +130,31 @@ def abandoned_bunker():
     print("\nYou come across an abandoned bunker. Do you explore it?")
     choice = make_decision("Type Y for yes or N for no: ")
     if choice == 'Y':
-        loot = random.choice(["ammunition", "food", "water"])
-        print(f"You found a stash of {loot}. Your health remains unchanged.")
-        add_to_inventory(loot.upper().replace(" ", "_"))  # Add loot to inventory
-        print(
-            "\nAs you search through the bunker, you are ambushed by stalkers, mutated soldiers that failed their mission to leave the zone.")
-        change_health(-40)
+        print("\nAs you enter the bunker, you are startled by a loud noise behind you.")
+        print("Before you can react, a monstrous creature lunges at you, but instead of attacking, it saves you from the stalkers that are behind you.")
+        print("The creature seems to ignore you, focused on the stalkers.")
+        print("Do you:")
+        print("A. Fight alongside the creature against the stalkers.")
+        print("B. Sneak away while the creature and the stalkers are occupied.")
+
+        choice = make_decision("Enter A or B: ")
+
+        if choice == 'A':
+            print("\nYou decide to fight alongside the creature. Together, you defeat the stalkers and emerge victorious.")
+            change_health(10)
+        else:
+            print("\nYou choose to sneak away while the creature engages the stalkers.")
+            print("You manage to slip away unnoticed and exit the bunker.")
+            return
+
     else:
         print("You choose not to explore the abandoned bunker.")
 
+    print("\nAs you leave the bunker, you find yourself outside an old building just in time.")
+    print("The acid rain begins to fall, providing cover and a chance to rest and recover.")
+
+    # Rest and loot scenario
+    resting()
 
 # Scenario 9: Acid Rain
 def acid_rain():
@@ -154,11 +170,46 @@ def acid_rain():
 # Scenario 10: Deserted Town
 def deserted_town():
     global health
-    print("\nYou stumble upon a deserted town. Do you scavenge for supplies?")
+    print("\nYou arrive at a deserted town. Among the ruins, you spot an old school building.")
+    print("Do you explore the old school?")
+
     choice = make_decision("Type Y for yes or N for no: ")
     if choice == 'Y':
-        loot = random.choice(["medical supplies", "clothing", "tools"])
-        print(f"You found some {loot}. Your health remains unchanged.")
-        add_to_inventory(loot.upper().replace(" ", "_"))  # Add loot to inventory
-    else:
+        print("\nAs you explore the old school, you navigate through the debris and shattered furniture.")
+        print("You hear faint noises echoing through the halls, but you push forward.")
 
+        # Encounter in the school
+        print("\nSuddenly, you hear a loud noise at the end of one of the hallways.")
+        print("You ready your weapon, preparing for a possible confrontation.")
+
+        # Fighting off enemies
+        print("\nAs you cautiously advance, you encounter mutated creatures lurking in the shadows.")
+        print("You engage in a fierce battle to defend yourself against the creatures.")
+
+        # Assuming the player survives the encounter
+        print("\nAfter defeating the creatures, you take a moment to catch your breath.")
+        change_health(5)
+
+    else:
+        print("You decide not to explore the old school.")
+
+# Main game loop
+if __name__ == "__main__":
+    print("Welcome to the world of survival, Artyom. It's time to fight.")
+
+    health = 100
+
+    scenarios = [explore_wasteland, find_shelter, scavenging, fight_radroaches, find_weapon, abandoned_bunker,
+                 deserted_town, acid_rain]
+
+    for scenario in scenarios:
+        if health > 0:
+            scenario()
+        else:
+            print("You have perished in the harsh wasteland.")
+            break
+
+    if health > 0:
+        print("\nCongratulations, Artyom! You've survived the nuclear apocalypse.")
+    else:
+        print("\nGame over. Artyom could not endure the challenges of the wasteland.")
