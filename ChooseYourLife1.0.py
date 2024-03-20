@@ -4,6 +4,12 @@
 
 # Print initial mission information
 # Function to handle health changes
+import time
+
+# Global variable to track player's health
+health = 25
+
+# Function to handle health changes
 def change_health(amount):
     global health
     health += amount
@@ -118,24 +124,23 @@ if __name__ == "__main__":
     print("Our mission is to get out of the woods!")
     print("Make a wrong turn or choice and you could be in a fight for your life")
 
-    health = 25
-
     scenarios = [apple_tree, fork_in_trail, cave, river, house, campfire, awake, forest, sword]
 
     for scenario in scenarios:
         if health > 0:
             scenario()
+            time.sleep(2)  # Add a delay of 2 seconds between each scenario
         else:
             print("You have died. You never escaped the forest!")
             break
 
     # Ending
+    print("\nYou awaken abruptly, heart pounding.")
+    print("The remnants of a chilling nightmare linger in your mind.")
+    print("The eerie whispers of the forest envelop you.")
+    print("Invisible watchers, their presence palpable, beckon from the shadows.")
+    print("Behind you, only an abyss of darkness; then, a bone-chilling voice: 'Gotcha.'")
     if health > 0:
-        print("\nYou awaken abruptly, heart pounding.")
-        print("The remnants of a chilling nightmare linger in your mind.")
-        print("The eerie whispers of the forest envelop you.")
-        print("Invisible watchers, their presence palpable, beckon from the shadows.")
-        print("Behind you, only an abyss of darkness; then, a bone-chilling voice: 'Gotcha.'")
         if health > 15:
             print("\nBut as you gather your strength and resolve, you realize it was all a test.")
             print("You've overcome the challenges of the forest, emerging victorious and alive.")
@@ -148,10 +153,5 @@ if __name__ == "__main__":
             print("Game over. You have perished in the depths of the woods.")
             print("Subject 72, status: deceased. Location: Forever lost. Time: Unknown.")
     else:
-        print("\nYou awaken abruptly, heart pounding.")
-        print("The remnants of a chilling nightmare linger in your mind.")
-        print("The eerie whispers of the forest envelop you.")
-        print("Invisible watchers, their presence palpable, beckon from the shadows.")
-        print("Behind you, only an abyss of darkness; then, a bone-chilling voice: 'Gotcha.'")
         print("\nGame over. Subject 72, status: awake. Location: Bravo Site-34. Time: 13:50.")
 
