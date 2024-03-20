@@ -151,13 +151,19 @@ if __name__ == "__main__":
             print("\nBut as you gather your strength and resolve, you realize it was all a test.")
             print("You've overcome the challenges of the forest, emerging victorious and alive.")
             print("You made it out of the woods!")
-            print("Congratulations! You've won the game.")
+            import time
+            # Introduce a 30-second delay with loading dots
+            print("Spartan Ranger survived. Wake-up process has begun. Countdown: ", end="")
+            for _ in range(10):
+                print(".", end="", flush=True)  # Flush is used to immediately print without buffering
+                time.sleep(3)  # Sleep for 3 seconds
+            print("\nWelcome to the Order, Artyom. It's time to fight!")
         else:
             print("\nOverwhelmed by the horrors of the forest, you succumb to darkness.")
             print("Your heart races faster until it can no longer bear the terror.")
             print("In the end, the forest claims another victim.")
             print("Game over. You have perished in the depths of the woods.")
-            print("Subject 72, status: deceased. Location: Forever lost. Time: Unknown.")
+            print("Spartan Artyom, status: deceased. Location: radioactive  forest. Time: Unknown.")
     else:
         print("\nGame over. Subject 72, status: awake. Location: Bravo Site-34. Time: 13:50.")
 
