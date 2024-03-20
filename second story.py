@@ -1,17 +1,17 @@
+# pr0grammer marcus campos-jones
+# date 3.20.2024
+
 import time
 import random
-
 
 # Function to handle health changes
 def change_health(amount):
     global health
     health += amount
     if amount < 0:
-        print(
-            f"You have lost health! Decreasing health by {abs(amount)}, resulting in your health decreasing to {health}.")
+        print(f"You have lost health! Decreasing health by {abs(amount)}, resulting in your health decreasing to {health}.")
     else:
         print(f"Your health increased by {amount}, resulting in your health level increasing to {health}.")
-
 
 # Function to handle decision prompts
 def make_decision(prompt):
@@ -22,15 +22,12 @@ def make_decision(prompt):
         else:
             print("Invalid input. Please enter Y or N.")
 
-
 # Inventory
 inventory = []
-
 
 # Add item to inventory
 def add_to_inventory(item):
     inventory.append(item)
-
 
 # Use item from inventory
 def use_item(item):
@@ -38,7 +35,6 @@ def use_item(item):
     if item == 'FIRST_AID_KIT':
         change_health(10)
         print("You used the first aid kit and regained some health.")
-
 
 # Scenario 1: Finding a Weapon
 def find_weapon():
@@ -50,7 +46,6 @@ def find_weapon():
     else:
         print("You chose not to take the weapon.")
 
-
 # Scenario 2: Finding a First Aid Kit
 def find_first_aid_kit():
     global health
@@ -60,7 +55,6 @@ def find_first_aid_kit():
         add_to_inventory('FIRST_AID_KIT')
     else:
         print("You chose not to use the first aid kit.")
-
 
 # Scenario 3: Toxic Radiation Zone
 def radiation_zone():
@@ -72,7 +66,6 @@ def radiation_zone():
     else:
         change_health(-20)
 
-
 # Scenario 4: Scavenging for Supplies
 def scavenging():
     global health
@@ -82,7 +75,6 @@ def scavenging():
         change_health(5)
     else:
         change_health(-5)
-
 
 # Scenario 5: Firefight
 def firefight():
@@ -94,7 +86,6 @@ def firefight():
     else:
         print("You chose not to engage in the firefight.")
 
-
 # Scenario 6: Radioactive Animals
 def radioactive_animals():
     global health
@@ -104,7 +95,6 @@ def radioactive_animals():
         change_health(-25)
     else:
         change_health(5)
-
 
 # Scenario 7: Resting
 def resting():
@@ -117,12 +107,10 @@ def resting():
 
         # Dream sequence
         print("\nAs you drift into sleep, memories of your recent struggles haunt your dreams.")
-        print(
-            "Visions of toxic radiation zones, fierce firefights, and encounters with radioactive animals flash before your eyes.")
+        print("Visions of toxic radiation zones, fierce firefights, and encounters with radioactive animals flash before your eyes.")
         print("You wake up in a cold sweat, the nightmares of the wasteland still fresh in your mind.")
     else:
         print("You decide to keep moving forward.")
-
 
 # Scenario 8: Abandoned Bunker
 def abandoned_bunker():
@@ -166,7 +154,6 @@ def acid_rain():
     else:
         print("You brave the acid rain and continue on your journey.")
 
-
 # Scenario 10: Deserted Town
 def deserted_town():
     global health
@@ -189,11 +176,14 @@ def deserted_town():
         # Assuming the player survives the encounter
         print("\nAfter defeating the creatures, you take a moment to catch your breath.")
         change_health(5)
+ for scenario in scenarios:
+        if health > 0:
+            scenario()
+        else:
+            print("You have perished in the harsh wasteland.")
+            break
 
-    else:
-        print("You decide not to explore the old school.")
-
-# Main game loop
+        # Main game loop
 if __name__ == "__main__":
     print("Welcome to the world of survival, Artyom. It's time to fight.")
 
@@ -211,5 +201,8 @@ if __name__ == "__main__":
 
     if health > 0:
         print("\nCongratulations, Artyom! You've survived the nuclear apocalypse.")
+        print("You've made it out of the wasteland alive. The future is uncertain, but you have overcome the odds.")
+        print("GOOD ENDING: Artyom emerges as a resilient survivor, ready to face whatever challenges lie ahead.")
     else:
-        print("\nGame over. Artyom could not endure the challenges of the wasteland.")
+        print("\nGAME OVER")
+        print("BAD ENDING: Artyom could not endure the challenges of the wasteland. He succumbed to its dangers.")
