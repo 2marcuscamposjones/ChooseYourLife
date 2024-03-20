@@ -170,4 +170,24 @@ if health > 0:
     print("The eerie whispers of the forest envelop you.")
     print("Invisible watchers, their presence palpable, beckon from the shadows.")
     print("Behind you, only an abyss of darkness; then, a bone-chilling voice: 'Gotcha.'")
+
+    # Good ending
+    if health > 15:
+        print("\nBut as you gather your strength and resolve, you realize it was all a test.")
+        print("You've overcome the challenges of the forest, emerging victorious and alive.")
+        print("You made it out of the woods!")
+        print("Congratulations! You've won the game.")
+    # Bad ending
+    else:
+        print("\nOverwhelmed by the horrors of the forest, you succumb to darkness.")
+        print("Your heart races faster until it can no longer bear the terror.")
+        print("In the end, the forest claims another victim.")
+        print("Game over. You have perished in the depths of the woods.")
+        print("Subject 72, status: deceased. Location: Forever lost. Time: Unknown.")
+else:
+    print("\nYou awaken abruptly, heart pounding.")
+    print("The remnants of a chilling nightmare linger in your mind.")
+    print("The eerie whispers of the forest envelop you.")
+    print("Invisible watchers, their presence palpable, beckon from the shadows.")
+    print("Behind you, only an abyss of darkness; then, a bone-chilling voice: 'Gotcha.'")
     print("\nGame over. Subject 72, status: awake. Location: Bravo Site-34. Time: 13:50.")
