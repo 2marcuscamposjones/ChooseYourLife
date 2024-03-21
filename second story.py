@@ -1,6 +1,5 @@
 # pr0grammer marcus campos-jones
 # date 3.20.2024
-
 import time
 import random
 
@@ -174,35 +173,5 @@ def deserted_town():
         print("You engage in a fierce battle to defend yourself against the creatures.")
 
         # Assuming the player survives the encounter
-        print("\nAfter defeating the creatures, you take a moment to catch your breath.")
-        change_health(5)
- for scenario in scenarios:
-        if health > 0:
-            scenario()
-        else:
-            print("You have perished in the harsh wasteland.")
-            break
+        print("\nAfter defeating the creatures, you")
 
-        # Main game loop
-if __name__ == "__main__":
-    print("Welcome to the world of survival, Artyom. It's time to fight.")
-
-    health = 100
-
-    scenarios = [explore_wasteland, find_shelter, scavenging, fight_radroaches, find_weapon, abandoned_bunker,
-                 deserted_town, acid_rain]
-
-    for scenario in scenarios:
-        if health > 0:
-            scenario()
-        else:
-            print("You have perished in the harsh wasteland.")
-            break
-
-    if health > 0:
-        print("\nCongratulations, Artyom! You've survived the nuclear apocalypse.")
-        print("You've made it out of the wasteland alive. The future is uncertain, but you have overcome the odds.")
-        print("GOOD ENDING: Artyom emerges as a resilient survivor, ready to face whatever challenges lie ahead.")
-    else:
-        print("\nGAME OVER")
-        print("BAD ENDING: Artyom could not endure the challenges of the wasteland. He succumbed to its dangers.")
